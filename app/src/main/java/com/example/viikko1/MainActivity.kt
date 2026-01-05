@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            HomeScreen(mockTasks)
+            HomeScreen()
         }
     }
 }
@@ -40,7 +40,7 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun HomeScreen(tasks: List<Task>) {
+fun HomeScreen() {
     var taskList by remember { mutableStateOf(mockTasks) }
 
     Column(modifier = Modifier.padding(16.dp)) {
